@@ -1,0 +1,16 @@
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\OoBanco.exe
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\OoBanco.deps.json
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\OoBanco.runtimeconfig.json
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\OoBanco.runtimeconfig.dev.json
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\OoBanco.dll
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\ref\OoBanco.dll
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\bin\Debug\net5.0\OoBanco.pdb
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.csproj.AssemblyReference.cache
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.AssemblyInfoInputs.cache
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.AssemblyInfo.cs
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.csproj.CoreCompileInputs.cache
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.dll
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\ref\OoBanco.dll
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.pdb
+C:\Users\sofis\Pictures\Sofia\ETE\LingPr\OO\ETE_2021_LingPr_OrientacaoObjetoBanco\OoBanco\obj\Debug\net5.0\OoBanco.genruntimeconfig.cache
