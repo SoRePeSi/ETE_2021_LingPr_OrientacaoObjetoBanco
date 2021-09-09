@@ -4,17 +4,9 @@ namespace OoBanco{
     class Program{
         static void Main(string[] args){
             ContaCorrente ContaBarbara = new ContaCorrente();
+            ContaBarbara.CriarConta("Bárbara", 1234, 789, 100.50);
             ContaCorrente ContaJoao = new ContaCorrente();
-            
-            ContaBarbara.titular = "Bárbara";
-            ContaBarbara.agencia = 1234;
-            ContaBarbara.conta = 789;
-            ContaBarbara.saldo = 100.50;
-            
-            ContaJoao.titular = "João";
-            ContaJoao.agencia = 1234;
-            ContaJoao.conta = 790;
-            ContaJoao.saldo = 120;
+            ContaJoao.CriarConta("João", 1234, 790, 120);
 
             Console.WriteLine("O titular da conta é {0}", ContaBarbara.titular);
             Console.WriteLine("O titular da conta é {0}", ContaJoao.titular);
