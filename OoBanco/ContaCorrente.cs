@@ -2,7 +2,11 @@ using System;
 public class ContaCorrente{
     public string titular;
     public int agencia, conta;
-    public double saldo;
+    private double saldo {get; set;}
+
+    public double ConsultaSaldo(){
+        return this.saldo;
+    }
     public ContaCorrente(){}
     public ContaCorrente(string titular, int agencia, int conta, double saldo){
         this.titular = titular;
@@ -29,11 +33,11 @@ public class ContaCorrente{
         else{
             this.saldo += valor;
 
-            Console.WriteLine("Operação finalizada.");
             return true;
         }
     }
 
+    
     public bool Transferir(ContaCorrente receptor, double valor){
         if((valor<0)||(this.saldo<valor)){
             return false;
@@ -42,12 +46,10 @@ public class ContaCorrente{
             try{
                 this.Sacar(valor);
                 receptor.Depositar(valor);
-
-                Console.WriteLine("Operação finalizada");
                 return true;
             }
             catch{
-                Console.WriteLine("ERRO:\nConta inexistente.");
+                Console.WriteLine("ERRO");
                 return false;
             }
         }
