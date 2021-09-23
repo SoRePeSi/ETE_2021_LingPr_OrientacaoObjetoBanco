@@ -1,58 +1,66 @@
 using System;
 public class ContaCorrente{
-    public string titular;
-    public int agencia, conta;
-    private double saldo {get; set;}
+	public string Titular{get; set;}
+	public int Agencia{get; set;}
+	public int Conta{get; set;}
 
-    public double ConsultaSaldo(){
-        return this.saldo;
-    }
-    public ContaCorrente(){}
-    public ContaCorrente(string titular, int agencia, int conta, double saldo){
-        this.titular = titular;
-        this.agencia = agencia;
-        this.conta = conta;
-        this.saldo = saldo;
-    }
+	private double _saldo = 0;
+	public double Saldo{
+		get {return this._saldo;}
 
-    public bool Sacar(double valor){
-        if((this.saldo<valor)||(valor<0)){
-            return false;
-        }
-        else{
-            this.saldo -= valor;
-            return true;
-        }
-    }
+		set{this._saldo = value;}
+	}
 
-    public bool Depositar(double valor){
-        if(valor<=0){
-            Console.WriteLine("ERRO\nValor a depositar deve ser positivo");
-            return false;
-        }
-        else{
-            this.saldo += valor;
+	public static int TotalDeContas{get; set;}
 
-            return true;
-        }
-    }
+	public ContaCorrente(){}
+	
+	public ContaCorrente(string titular, int agencia, int conta, double _saldo){
+		this.Titular = titular;
+		this.Agencia = agencia;
+		this.Conta = conta;
+		this._saldo = _saldo;
 
-    
-    public bool Transferir(ContaCorrente receptor, double valor){
-        if((valor<0)||(this.saldo<valor)){
-            return false;
-        }
-        else{
-            try{
-                this.Sacar(valor);
-                receptor.Depositar(valor);
-                return true;
-            }
-            catch{
-                Console.WriteLine("ERRO");
-                return false;
-            }
-        }
-    }
+		TotalDeContas++;
+	}
 
+	public bool Sacar(double valor){
+		if((this._saldo<valor)||(valor<0)){
+			return false;
+		}
+		else{
+			this._saldo -= valor;
+			return true;
+		}
+	}
+
+	public bool Depositar(double valor){
+		if(valor<=0){
+			Console.WriteLine("ERRO\nValor a depositar deve ser positivo");
+			return false;
+		}
+		else{
+			this._saldo += valor;
+
+			return true;
+		}
+	}
+
+	
+	public bool Transferir(ContaCorrente receptor, double valor){
+		if((valor<0)||(this._saldo<valor)){
+			return false;
+		}
+		else{
+			try{
+				this.Sacar(valor);
+				receptor.Depositar(valor);
+				return true;
+			}
+			catch{
+				Console.WriteLine("ERRO");
+				return false;
+			}
+		}
+	}
 }
