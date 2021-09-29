@@ -15,21 +15,6 @@ namespace OoBanco{
 			ContaSofiaRezende.Sacar(10);
 			ContaCarmem.Depositar(200);
 			ContaAifos.Transferir(ContaSofiaRezende, 100);
-			if((valor<0)||(this._saldo<valor)){
-				return false;
-			}
-			else{
-				try{
-					this.Sacar(valor);
-					receptor.Depositar(valor);
-					Console.WriteLine("TRANSFERÊNCIA EFETUADA COM SUCESSO\nSaldo atual de {0}: R${1}\nSaldo atual de {2}: R${3}\n", this.Titular, this._saldo, receptor.Titular, receptor._saldo);
-					return true;
-				}
-				catch{
-						Console.WriteLine("ERRO");
-						return false;
-					}
-			}
 		}
 	}
 }
