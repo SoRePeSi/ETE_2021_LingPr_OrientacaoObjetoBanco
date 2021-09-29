@@ -58,8 +58,8 @@ public class ContaCorrente{
 		}
 		else{
 			try{
-				this.Sacar(valor);
-				receptor.Depositar(valor);
+				this.Saldo -= valor;
+				receptor.Saldo += valor;
 				Console.WriteLine("TRANSFERÊNCIA EFETUADA COM SUCESSO\nSaldo atual de {0}: R${1}\nSaldo atual de {2}: R${3}\n", this.Titular, this._saldo, receptor.Titular, receptor._saldo);
 				return true;
 			}

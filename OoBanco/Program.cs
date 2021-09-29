@@ -10,6 +10,8 @@ namespace OoBanco{
 			ContaCorrente ContaSofiaRezende = new ContaCorrente("Sofia Rezende", 1357, 799, 50, FuncionarioAsquenaz);
 			ContaCorrente ContaCarmem = new ContaCorrente("Carmem", 1234, 789, 100.50, FuncionarioSonia);
 			ContaCorrente ContaAifos = new ContaCorrente("Aifos", 1245, 790, 120, FuncionarioAsquenaz);
+			
+			Console.WriteLine("Quantidade de contas: {0}", ContaCorrente.TotalDeContas);
 			Console.WriteLine("\n");
 
 			ContaSofiaRezende.Sacar(10);
