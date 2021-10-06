@@ -6,6 +6,21 @@ public class Funcionario{
 	public string Cargo {get; set;}
 	public double Salario {get; set;}
 	public double Comissao {get; set;}
+	
+	private double _bonificacao {get; set;}
+	public double Bonificacao{
+		get{
+			return this._bonificacao;
+		}
+		set{
+			if(this.Cargo=="Vendedor"){
+				this._bonificacao += value * 0.02;
+			}
+			else if(this.Cargo=="Diretor"){
+				this._bonificacao += value * 0.08;
+			}
+		}
+	}
 
 	public Funcionario(){}
 
