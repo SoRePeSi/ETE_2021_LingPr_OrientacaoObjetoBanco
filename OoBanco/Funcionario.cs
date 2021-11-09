@@ -1,35 +1,27 @@
 using System;
+using System.Collections.Generic;
 
 public class Funcionario{
 	public string Nome {get; set;}
 	public string CPF {get; set;}
-	public string Cargo {get; set;}
 	public double Salario {get; set;}
-	public double Comissao {get; set;}
 	
-	private double _bonificacao {get; set;}
-	public double Bonificacao{
+	public static List<Funcionario> TodosFuncionarios = new List<Funcionario>();
+	
+	protected double _bonificacao;
+	public virtual double Bonificacao{
 		get{
-			return this._bonificacao;
+			return _bonificacao;
 		}
 		set{
-			if(this.Cargo=="Vendedor"){
-				this._bonificacao += value * 0.02;
-			}
-			else if(this.Cargo=="Diretor"){
-				this._bonificacao += value * 0.08;
-			}
+			_bonificacao = Salario*0.01;
 		}
 	}
-
-	public Funcionario(){}
-
-	public Funcionario(string funcNome, string funcCPF, string funcCargo, double funcSalario){
-		this.Nome = funcNome;
-		this.CPF = funcCPF;
-		this.Cargo = funcCargo;
-		this.Salario = funcSalario;
-
-		Console.WriteLine("Funcionário {0}.", this.Nome);
-	}	
+	
+	public List<ContaCorrente> Clientes = new List<ContaCorrente>();
+	public int[] agencias = {};
+	
+	public double RemuneracaoAnual{get{return (this.Salario*13+this.Bonificacao);}}
+	
+	public virtual int DiasDeFerias{get{return 30;}}
 }

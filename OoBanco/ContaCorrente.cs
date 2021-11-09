@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Generic;
 
 public class ContaCorrente{
 	public string Titular{get; set;}
 	public int Agencia{get; set;}
+	public int Responsavel{get; set;}
 	public int Conta{get; set;}
 	private double _saldo = 0;
 	public double Saldo{
@@ -10,22 +12,25 @@ public class ContaCorrente{
 
 		set{this._saldo = value;}
 	}
-
-	public static int TotalDeContas{get; set;}
-	public static double TotalDeComissao{get; set;}
+	
+	public static List<ContaCorrente> TodosClientes = new List<ContaCorrente>();
 
 	public ContaCorrente(){}
 	
-	public ContaCorrente(string titular, int agencia, int conta, double conta_saldo, Funcionario funcionario){
-		this.Titular = titular;
-		this.Agencia = agencia;
-		this.Conta = conta;
-		this._saldo = conta_saldo;
+	public ContaCorrente(string titular, int agencia, int conta, double conta_saldo){
+		if(!Vendedor.TodasAgencias.Exists(x => x == agencia)){
+			Console.WriteLine("AGENCIA INEXISTENTE");
+		}
+		else{
+			this.Titular = titular;
+			this.Agencia = agencia;
+			this.Conta = conta;
+			this._saldo = conta_saldo;
 
-		Console.WriteLine("Conta de {0} criada.", this.Titular);
+			Console.WriteLine("Conta de {0} criada.", this.Titular);
 
-		TotalDeContas++;
-		funcionario.Comissao += conta_saldo*0.01;
+			TodosClientes.Add(this);
+		}
 	}
 
 	public bool Sacar(double valor){
