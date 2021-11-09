@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class ContaCorrente{
 	public string Titular{get; set;}
 	public int Agencia{get; set;}
-	public int Responsavel{get; set;}
 	public int Conta{get; set;}
 	private double _saldo = 0;
 	public double Saldo{
